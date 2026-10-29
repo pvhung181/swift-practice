@@ -9,13 +9,14 @@ let gradientColors: [Color] = [
 struct ContentView: View {
     
     var body: some View {
-        TabView {
-            WelcomePage()
-            FeaturePage()
+        VStack {
+            Button("Go to onboarding flow") {
+                
+            }
+            .buttonStyle(.glass)
+            
+            
         }
-        .background(Gradient(colors: gradientColors))
-        .tabViewStyle(.page)
-        .foregroundStyle(.white)
     }
 }
 
