@@ -14,8 +14,12 @@ struct ContentView: View {
                 
             }
             .buttonStyle(.glass)
+            .padding()
             
-            
+            Button("Go to Dice Roller page") {
+                
+            }
+            .buttonStyle(.glass)
         }
     }
 }
