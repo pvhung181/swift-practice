@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 let gradientColors: [Color] = [
     .gradientTop,
@@ -9,22 +10,12 @@ let gradientColors: [Color] = [
 struct ContentView: View {
     
     var body: some View {
-        VStack {
-            Button("Go to onboarding flow") {
-                
-            }
-            .buttonStyle(.glass)
-            .padding()
-            
-            Button("Go to Dice Roller page") {
-                
-            }
-            .buttonStyle(.glass)
-        }
+        BirthdaysPage()
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: Friend.self, inMemory: true)
     
 }
