@@ -13,7 +13,7 @@ struct SampleApplictionApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: Friend.self)
+                .modelContainer(for: FriendBirthday.self)
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @Model
-class Friend {
+class FriendBirthday {
     var name: String
     var birthday: Date
     

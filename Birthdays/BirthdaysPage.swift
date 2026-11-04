@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct BirthdaysPage: View {
-    @Query(sort: \Friend.birthday) private var friends: [Friend]
+    @Query(sort: \FriendBirthday.birthday) private var friends: [FriendBirthday]
     @Environment(\.modelContext) private var context
     
     @State private var newName = ""
@@ -45,7 +45,7 @@ struct BirthdaysPage: View {
                     
                     
                     Button("Save") {
-                        let newFriend = Friend(name: newName, birthday: newDate)
+                        let newFriend = FriendBirthday(name: newName, birthday: newDate)
                         context.insert(newFriend)
                         newName = ""
                         newDate = .now
@@ -60,5 +60,5 @@ struct BirthdaysPage: View {
 }
 
 #Preview {
-    BirthdaysPage().modelContainer(for: Friend.self, inMemory: true)
+    BirthdaysPage().modelContainer(for: FriendBirthday.self, inMemory: true)
 }

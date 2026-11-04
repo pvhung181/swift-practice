@@ -10,12 +10,14 @@ let gradientColors: [Color] = [
 struct ContentView: View {
     
     var body: some View {
-        BirthdaysPage()
+       FriendsFavouriteMoviesPage()
+            .modelContainer(SampleData.shared.modelContainer)
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: FriendBirthday.self, inMemory: true)
         .modelContainer(for: Friend.self, inMemory: true)
     
 }
